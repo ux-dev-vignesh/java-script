@@ -168,8 +168,18 @@ let user = {
     contact: 9677579718
 }
 
-for (let prop in user) {
-    console.log(prop + " : " + user[prop]);
+// for (let prop in user) {
+//     console.log(prop + " : " + user[prop]);
+// }
+
+let array_keys = Object.keys(user);
+console.table(array_keys);
+
+let array_values = Object.values(user);
+console.table(array_values);
+
+for (let v = 0; v < array_keys.length; v++) {
+    console.log(array_keys[v] + " : " + array_values[v]);
 }
 
 console.log("--------------------------------------");
